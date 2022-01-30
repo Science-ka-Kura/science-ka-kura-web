@@ -65,20 +65,27 @@ PODCAST_DATA.forEach((eachData) => {
 
   // Podcast media player container
   const podcastMediaPlayer = document.createElement("div");
-  podcastMediaPlayer.style.display = "flex";
 
+  podcastMediaPlayer.style.display = "flex";
+  podcastMediaPlayer.style.gap = "2em";
+
+  const podcastMediaPlayerSpotifyLinkContainer = document.createElement("div");
   const podcastMediaPlayerSpotifyLink = document.createElement("a");
   podcastMediaPlayerSpotifyLink.className = "icon-spotify";
   podcastMediaPlayerSpotifyLink.href = "/";
-  podcastMediaPlayerSpotifyLink.style.padding = "3px";
+  podcastMediaPlayerSpotifyLink.style.fontSize = "2rem";
+
+  const podcastMediaPlayerAppleLinkContainer = document.createElement("div");
   const podcastMediaPlayerAppleLink = document.createElement("a");
   podcastMediaPlayerAppleLink.className = "icon-music";
   podcastMediaPlayerAppleLink.href = "/";
-  podcastMediaPlayerAppleLink.style.padding = "3px";
+  podcastMediaPlayerAppleLink.style.fontSize = "2rem";
+
+  const podcastMediaPlayerYouTubeLinkContainer = document.createElement("div");
   const podcastMediaPlayerYouTubeLink = document.createElement("a");
   podcastMediaPlayerYouTubeLink.className = "icon-youtube";
   podcastMediaPlayerYouTubeLink.href = "/";
-  podcastMediaPlayerYouTubeLink.style.padding = "3px";
+  podcastMediaPlayerYouTubeLink.style.fontSize = "2rem";
 
   eachPodcastTitle.appendChild(eachPodcastLink);
   podcastDataTextContainer.appendChild(eachPodcastTitle);
@@ -87,9 +94,17 @@ PODCAST_DATA.forEach((eachData) => {
   podcastSubtitleSpan.appendChild(podcastSubtitleSpanTextContainer);
   podcastDataTextContainer.appendChild(podcastDescription);
 
-  podcastMediaPlayer.appendChild(podcastMediaPlayerSpotifyLink);
-  podcastMediaPlayer.appendChild(podcastMediaPlayerAppleLink);
-  podcastMediaPlayer.appendChild(podcastMediaPlayerYouTubeLink);
+  podcastMediaPlayerSpotifyLinkContainer.appendChild(
+    podcastMediaPlayerSpotifyLink,
+  );
+  podcastMediaPlayerAppleLinkContainer.appendChild(podcastMediaPlayerAppleLink);
+  podcastMediaPlayerYouTubeLinkContainer.appendChild(
+    podcastMediaPlayerYouTubeLink,
+  );
+
+  podcastMediaPlayer.appendChild(podcastMediaPlayerSpotifyLinkContainer);
+  podcastMediaPlayer.appendChild(podcastMediaPlayerAppleLinkContainer);
+  podcastMediaPlayer.appendChild(podcastMediaPlayerYouTubeLinkContainer);
   podcastDataTextContainer.appendChild(podcastMediaPlayer);
 
   podcastDataContainer.appendChild(podcastImageDiv);
