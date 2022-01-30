@@ -65,16 +65,20 @@ PODCAST_DATA.forEach((eachData) => {
 
   // Podcast media player container
   const podcastMediaPlayer = document.createElement("div");
-  podcastMediaPlayer.className = "player";
-  const podcastAudio = document.createElement("audio");
-  podcastAudio.id = "player2";
-  podcastAudio.style.maxWidth = "100%";
-  podcastAudio.preload = "none";
+  podcastMediaPlayer.style.display = "flex";
 
-  const podcastAudioSource = document.createElement("source");
-  podcastAudioSource.src =
-    "http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3";
-  podcastAudioSource.type = "audio/mp3";
+  const podcastMediaPlayerSpotifyLink = document.createElement("a");
+  podcastMediaPlayerSpotifyLink.className = "icon-spotify";
+  podcastMediaPlayerSpotifyLink.href = "/";
+  podcastMediaPlayerSpotifyLink.style.padding = "3px";
+  const podcastMediaPlayerAppleLink = document.createElement("a");
+  podcastMediaPlayerAppleLink.className = "icon-music";
+  podcastMediaPlayerAppleLink.href = "/";
+  podcastMediaPlayerAppleLink.style.padding = "3px";
+  const podcastMediaPlayerYouTubeLink = document.createElement("a");
+  podcastMediaPlayerYouTubeLink.className = "icon-youtube";
+  podcastMediaPlayerYouTubeLink.href = "/";
+  podcastMediaPlayerYouTubeLink.style.padding = "3px";
 
   eachPodcastTitle.appendChild(eachPodcastLink);
   podcastDataTextContainer.appendChild(eachPodcastTitle);
@@ -82,9 +86,11 @@ PODCAST_DATA.forEach((eachData) => {
   podcastSubtitleContainer.appendChild(podcastSubtitleSpan);
   podcastSubtitleSpan.appendChild(podcastSubtitleSpanTextContainer);
   podcastDataTextContainer.appendChild(podcastDescription);
+
+  podcastMediaPlayer.appendChild(podcastMediaPlayerSpotifyLink);
+  podcastMediaPlayer.appendChild(podcastMediaPlayerAppleLink);
+  podcastMediaPlayer.appendChild(podcastMediaPlayerYouTubeLink);
   podcastDataTextContainer.appendChild(podcastMediaPlayer);
-  podcastMediaPlayer.appendChild(podcastAudio);
-  podcastAudio.appendChild(podcastAudioSource);
 
   podcastDataContainer.appendChild(podcastImageDiv);
   podcastDataContainer.appendChild(podcastDataTextContainer);
