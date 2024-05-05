@@ -1,21 +1,21 @@
-const PODCAST_DATA = [
-  {
-    id: Math.random(),
-    title: "Episod 1: This is a test",
-    author: "Pramish Luitel",
-    date: "16 Sep 2021",
-    time: "2:30:20",
-    background_image: "some image url",
-  },
-  {
-    id: Math.random(),
-    title: "Episod 2: This is again test",
-    author: "Prabesh Thapa",
-    date: "17 Sep 2021",
-    time: "1:30:20",
-    background_image: "some image url",
-  },
-];
+// const PODCAST_DATA = [
+//   {
+//     id: Math.random(),
+//     title: "Episod 1: This is a test",
+//     author: "Pramish Luitel",
+//     date: "16 Sep 2021",
+//     time: "2:30:20",
+//     background_image: "some image url",
+//   },
+//   {
+//     id: Math.random(),
+//     title: "Episod 2: This is again test",
+//     author: "Prabesh Thapa",
+//     date: "17 Sep 2021",
+//     time: "1:30:20",
+//     background_image: "some image url",
+//   },
+// ];
 
 // OR
 
